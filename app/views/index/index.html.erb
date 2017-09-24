@@ -175,23 +175,27 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<!--<form method="post" action="#">-->
+              <%= form_tag('/tab/create') do %>
 								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
+                  <%= label :contact_label, :name %>
+                  <%= text_field :contact, :name %>
 								</div>
 								<div class="field">
-									<label for="email">Email</label>
-									<input type="text" name="email" id="email" />
+                  <%= label :contact_label, :email %>
+                  <%= text_field :contact, :email %>
 								</div>
 								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="3"></textarea>
+                  <%= label :contact_label, :message %>
+                  <%= text_area :contact, :message %>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li>
+                    <%= submit_tag('Send Message') %>
+                  </li>
 								</ul>
-							</form>
+              <% end %>
+							<!--</form>-->
 						</section>
 						<section class="split contact">
 							<section class="alt">

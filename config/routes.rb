@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/', to: 'index#index'
   get '/generic', to: 'tab#generic'
   get '/elements', to: 'tab#elements'
-
+  post '/tab/create', to: 'tab#create'
 end
