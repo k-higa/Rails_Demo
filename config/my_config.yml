@@ -1,0 +1,16 @@
+COMMON: &COMMON
+  author: "Higa Kazuyuki"
+  message: "From Okinawa!!"
+
+
+development:
+  id: "dev"
+  <<: *COMMON
+
+test:
+  id: "test"
+  <<: *COMMON
+
+production:
+  id: "production"
+  <<: *COMMON
